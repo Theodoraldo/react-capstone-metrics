@@ -29,7 +29,7 @@ export default function Country() {
               <img src={countryData.coatOfArms.svg} alt={id} className="flag" width={80} height={80} />
               <div>{`Capital : ${countryData.capital}`}</div>
               <div>{`Population : ${countryData.population} people`}</div>
-              <div>{`Area : ${countryData.area} km2`}</div>
+              <div>{`Area : ${countryData.area} square kilometers`}</div>
               <div>{`Latitude : ${countryData.latlng[0].toFixed(2)}`}</div>
               <div>{`Longitude : ${countryData.latlng[1].toFixed(2)}`}</div>
               <div>{`Region : ${countryData.region}`}</div>
