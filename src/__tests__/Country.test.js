@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, waitFor, screen } from '@testing-library/react';
-import Country from '../components/Country';
-import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+import Country from '../components/Country';
 
 describe('CountryData', () => {
   let mockAxios;
