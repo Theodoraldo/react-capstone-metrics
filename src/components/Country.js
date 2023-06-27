@@ -36,7 +36,7 @@ export default function Country() {
               <div>{`Sub region : ${countryData.subregion}`}</div>
               <div>{`Timezone : ${countryData.timezones[0]}`}</div>
               <div>
-                <div>languages :</div>
+                <div>language&#40;s&#41; :</div>
                 {
                   Object.entries(countryData.languages).map(([id, language]) => (
                     <li key={id}>{language}</li>
