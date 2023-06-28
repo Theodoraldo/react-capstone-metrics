@@ -18,6 +18,7 @@ const continentSlice = createSlice({
   extraReducers: {
     [getContinentDetails.pending]: (state) => {
       state.isLoading = true;
+      state.error = false;
     },
     [getContinentDetails.fulfilled]: (state, action) => {
       state.isLoading = false;
@@ -25,6 +26,7 @@ const continentSlice = createSlice({
     },
     [getContinentDetails.rejected]: (state) => {
       state.isLoading = false;
+      state.error = true;
     },
   },
 });

@@ -8,7 +8,24 @@
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
+}
+
+.search-head {
+  background-color: rgb(29, 27, 27);
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.search {
+  width: 40%;
+  padding: 6px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: rgb(29, 27, 27);
 }
 
 .country-detail-head {
@@ -45,4 +62,26 @@
 
 .bk-link {
   float: left;
+}
+
+.alert {
+  width: 50%;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 12px auto;
+  font-size: 16px;
+}
+
+.alert.alert-info {
+  background-color: rgba(217, 237, 247, 1);
+  color: rgba(49, 112, 143, 1);
+  border-color: rgba(126, 182, 193, 1);
+}
+
+.alert.alert-danger {
+  background-color: rgba(248, 215, 218, 1);
+  border-color: rgba(220, 53, 69, 1);
+  color: rgba(114, 28, 36, 1);
 }

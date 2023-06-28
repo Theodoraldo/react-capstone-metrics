@@ -11,6 +11,7 @@ export default function Country() {
   const navigate = useNavigate();
 
   const country = useSelector((state) => state.country.country);
+  const { isLoading, error } = useSelector((state) => state.country);
 
   useEffect(() => {
     dispatch(getCountryDetails(id));
@@ -22,6 +23,8 @@ export default function Country() {
         <BsArrowLeftCircle size="1.5rem" color="#ececec" className="bk-link" onClick={() => navigate(-1)} />
         {`Country - ${id}`}
       </p>
+      {error && <div className="alert alert-danger">Ooops, an error has occured</div>}
+      {isLoading && <div className="alert alert-info">Loading .......</div>}
       <div className="country-container">
         {
           Object.entries(country).map(([id, countryData]) => (

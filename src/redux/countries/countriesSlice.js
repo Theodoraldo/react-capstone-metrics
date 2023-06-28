@@ -18,6 +18,7 @@ const countriesSlice = createSlice({
   extraReducers: {
     [getCountryDetails.pending]: (state) => {
       state.isLoading = true;
+      state.error = false;
     },
     [getCountryDetails.fulfilled]: (state, action) => {
       state.isLoading = false;
@@ -25,6 +26,7 @@ const countriesSlice = createSlice({
     },
     [getCountryDetails.rejected]: (state) => {
       state.isLoading = false;
+      state.error = true;
     },
   },
 });
