@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -8,7 +8,6 @@ import './style/Continent.css';
 export default function Continent() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [search, setSearch] = useState('');
 
   const continent = useSelector((state) => state.continent.continent);
   const { isLoading, error } = useSelector((state) => state.continent);
@@ -24,9 +23,6 @@ export default function Continent() {
         <BsArrowLeftCircle size="1.5rem" color="#ececec" className="bk-link" onClick={() => navigate(-1)} />
         {`Continent - ${id}`}
       </p>
-      <div className="search-head">
-        <input type="text" className="search" placeholder="Search country here ...." value={search} onChange={(e) => setSearch(e.target.value)} />
-      </div>
       {error && <div className="alert alert-danger">Ooops, an error has occured</div>}
       {isLoading && <div className="alert alert-info">Loading .......</div>}
       <div className="continent-container">
