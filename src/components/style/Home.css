@@ -9,13 +9,18 @@
   box-shadow: 0 10px 35px -20px white;
 }
 
+.home-header-container {
+  background-color: rgb(29, 27, 27);
+  padding: 10px;
+}
+
 .home-header {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  background-color: rgb(29, 27, 27);
-  padding: 20px;
-  margin-bottom: 20px;
+}
+
+.search-head {
   position: sticky;
   top: 0;
 }

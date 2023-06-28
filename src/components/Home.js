@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style/Home.css';
 import { Link } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
@@ -19,12 +19,20 @@ const continentList = [
 ];
 
 export default function Home() {
+  const [search, setSearch] = useState('');
   return (
     <>
-      <p className="home-header">The World&#8217;s Continent</p>
+      <div className="home-header-container">
+        <p className="home-header">The World&#8217;s Continent</p>
+      </div>
+      <div className="search-head">
+        <input type="text" className="search" placeholder="Search country here ...." onChange={(e) => setSearch(e.target.value)} />
+      </div>
       <div className="wrap">
         {
-          continentList.map((continent) => (
+          continentList.filter((continent) => (
+            search.toLowerCase() === '' ? continent : continent.continent.toLowerCase().includes(search)
+          )).map((continent) => (
             <div key={continent.id} className="continent">
               <div className="cont-head">
                 <div>{continent.continent}</div>
