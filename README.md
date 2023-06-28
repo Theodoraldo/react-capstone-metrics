@@ -52,13 +52,13 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Show countries information**
+- **Show country's information**
 - **Displays continent information**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo](soon)
+- [Live Demo](https://country-metrics-tm34.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
