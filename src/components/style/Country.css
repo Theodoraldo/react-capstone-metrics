@@ -1,0 +1,16 @@
+.country-head {
+  background-color: rgb(29, 27, 27);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.country-container {
+  background-color: rgba(196, 124, 124, 0.2);
+  width: 350px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}

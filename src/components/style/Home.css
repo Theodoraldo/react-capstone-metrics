@@ -1,0 +1,63 @@
+.continent {
+  background-color: rgba(196, 124, 124, 0.2);
+  border: 1px solid rgb(32, 31, 31);
+  height: 200px;
+  width: 360px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 35px -20px white;
+}
+
+.home-header-container {
+  background-color: rgb(29, 27, 27);
+  padding: 10px;
+}
+
+.home-header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-head {
+  position: sticky;
+  top: 0;
+}
+
+.cont-head {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cont-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cont-body {
+  display: flex;
+  gap: 10px;
+}
+
+.link-detail {
+  float: right;
+  margin-right: 20px;
+}
+
+.arrow-right {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.arrow-right:hover {
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
