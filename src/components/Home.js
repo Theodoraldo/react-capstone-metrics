@@ -26,12 +26,12 @@ export default function Home() {
         <p className="home-header">The World&#8217;s Continent</p>
       </div>
       <div className="search-head">
-        <input type="text" className="search" placeholder="Search country here ...." onChange={(e) => setSearch(e.target.value)} />
+        <input type="text" className="search" placeholder="Search continent here ...." onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div className="wrap">
         {
           continentList.filter((continent) => (
-            search.toLowerCase() === '' ? continent : continent.continent.toLowerCase().includes(search)
+            search === '' ? continent : (continent.continent).toLowerCase().includes(search.toLowerCase())
           )).map((continent) => (
             <div key={continent.id} className="continent">
               <div className="cont-head">
