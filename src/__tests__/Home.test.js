@@ -13,23 +13,23 @@ describe('Renders correctly', () => {
   });
 
   test('object assignment', () => {
-    render(      
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>,
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>,
     );
 
-    const data = {one: 1};
-    data['two'] = 2;
-    data['three'] = 3;
-    expect(data).toEqual({one: 1, two: 2, three: 3});
-  })
+    const data = { one: 1 };
+    data.two = 2;
+    data.three = 3;
+    expect(data).toEqual({ one: 1, two: 2, three: 3 });
+  });
 
-  test('object assignment', () => {
-    render(      
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>,
+  test('Continent data rendering', () => {
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>,
     );
 
     const continentList = [
@@ -44,5 +44,5 @@ describe('Renders correctly', () => {
     const num = continentList.length;
     expect(num).toEqual(6);
     expect(continentList).toContain('Africa');
-  })
-})
+  });
+});
