@@ -28,17 +28,19 @@ export default function Continent() {
       <div className="continent-container">
         {Object.entries(continent).map(([id, rawData]) => (
           <>
-            <div className="country-detail-head">
-              <Link to={`/country/${rawData.name.common}`}><BsArrowRightCircle size="1.5rem" color="#ececec" className="link-detail" /></Link>
-            </div>
-            <div key={id} className="continent-details">
-              <div className="detail-left">
-                <img src={rawData.flags.svg} alt={id} className="flag" width={40} height={40} />
-                <div className="limit">{rawData.name.common}</div>
+            <div className="country-in-continent">
+              <div className={`country-detail-head ${id % 2 ? 'deep' : 'pale'}`}>
+                <Link to={`/country/${rawData.name.common}`}><BsArrowRightCircle size="1.5rem" color="#ececec" className="link-detail" /></Link>
               </div>
-              <div className="detail-right">
-                <div className="limit">{`Latitude : ${rawData.latlng[0].toFixed(2)}`}</div>
-                <div className="limit">{`Longitude : ${rawData.latlng[1].toFixed(2)}`}</div>
+              <div key={id} className={`continent-details ${id % 2 ? 'deep-body' : ''}`}>
+                <div className="detail-left">
+                  <img src={rawData.flags.svg} alt={id} className="flag" width={40} height={40} />
+                  <div className="limit">{rawData.name.common}</div>
+                </div>
+                <div className="detail-right">
+                  <div className="limit">{`Latitude : ${rawData.latlng[0].toFixed(2)}`}</div>
+                  <div className="limit">{`Longitude : ${rawData.latlng[1].toFixed(2)}`}</div>
+                </div>
               </div>
             </div>
           </>

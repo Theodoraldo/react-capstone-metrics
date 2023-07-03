@@ -11,6 +11,11 @@
   padding: 10px;
 }
 
+
+.country-in-continent {
+  width: 100%;
+}
+
 .search-head {
   background-color: rgb(29, 27, 27);
   text-align: center;
@@ -30,8 +35,20 @@
 
 .country-detail-head {
   width: 100%;
-  background-color: rgba(196, 124, 124, 0.2);
+  height: 35px;
   padding: 5px;
+}
+
+.deep {
+  background-color: rgba(196, 124, 124, 0.3);
+}
+
+.deep-body {
+  background-color: rgba(36, 33, 33, 0.5);
+}
+
+.pale {
+  background-color: rgba(196, 124, 124, 0.2);
 }
 
 .continent-details {
@@ -84,4 +101,18 @@
   background-color: rgba(248, 215, 218, 1);
   border-color: rgba(220, 53, 69, 1);
   color: rgba(114, 28, 36, 1);
+}
+
+@media only screen and (min-width: 600px) {
+  .country-in-continent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .country-in-continent {
+    width: 33.333333333333%;
+  }
 }
